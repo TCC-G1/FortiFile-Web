@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #007ACC;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+.home-buttons {
+    margin: 2rem 0;
+}
+
+.home-buttons .button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #007ACC;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.home-buttons .button:hover {
+    background-color: #005f99;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+}
