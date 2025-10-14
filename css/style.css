@@ -4,14 +4,67 @@ body {
     color: #111;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 header {
-    background-color: #007ACC;
+
     color: white;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
+
+.title-bar {
+    background-color: #111A22; /* mismo color que el modo oscuro de la app */
+    padding: 1rem 0;
+}
+
+.title-bar h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #359EFF; /* color azul corporativo */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem 0;
+}
+
+.navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding-bottom: 0.2rem;
+}
+
+.navbar .nav-link:hover {
+    color: #dff1ff;
+    border-bottom: 2px solid white;
+}
+
+.navbar .nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
 
 header h1 {
     margin: 0;
@@ -24,6 +77,24 @@ header p {
 
 main {
     padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.help-intro h2 {
+    margin-top: 0;
+}
+
+.help-sections article {
+    background-color: white;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.help-sections article h3 {
+    margin-top: 0;
 }
 
 .home-buttons {
@@ -47,13 +118,179 @@ main {
 }
 
 .intro {
-    max-width: 600px;
+    max-width: 800px;
     margin: 2rem auto;
-    font-size: 1.1rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+.intro h2 {
+    color: #007ACC;
+    margin-bottom: 1rem;
+}
+
+
+.intro p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.intro ul {
+    text-align: left;
+    list-style-type: square;
+    margin: 1rem auto;
+    padding-left: 1.5rem;
+    color: #333;
 }
 
 footer {
     background-color: #222;
     color: white;
+    text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* ======= EQUIPO ======= */
+.team {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.team h3 {
+    color: #007ACC;
+    text-align: center;
+}
+
+.team p {
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.avatar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+}
+
+.card h4 {
+    margin: 0.5rem 0;
+    color: #007ACC;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* ======= DESCARGAS ======= */
+.downloads {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.downloads h2 {
+    color: #007ACC;
+    margin-bottom: 0.5rem;
+}
+
+.downloads p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #333;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.download-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 260px;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.download-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.download-card h3 {
+    color: #007ACC;
+    margin-bottom: 0.5rem;
+}
+
+.download-card p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    background-color: #007ACC;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #005ea6;
+}
+
+.notes, .old-versions {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.notes h3, .old-versions h3 {
+    color: #007ACC;
 }
